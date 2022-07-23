@@ -1,9 +1,4 @@
-## Code here runs inside the initialize() function
-## Use it for anything that you need to run before any other function, like
-## setting environment vairables:
-## CONFIG_FILE=settings.ini
-##
-## Feel free to empty (but not delete) this file.
+#!/bin/sh
 
 CONSOLE_NORMAL=$'\e[0m'
 CONSOLE_BLACK=$'\e[30m'
@@ -20,7 +15,13 @@ check_os () {
     architecture=`uname -m`
     ostype=`uname -s | tr '[:upper:]' '[:lower:]'`
 }
+TOOLS=(docker kubectl cf helm step)
 check_os
-check_docker () {
-    [[ which docker ]] && CHK_DOCKER=1
+
+check_tools () {
+    for value in "$@";do
+        which $value > /dev/null && echo "✅ ${CONSOLE_GREEN} $value Installed ${CONSOLE_NORMAL}" || echo "❌ ${CONSOLE_RED} $value Not Installed ${CONSOLE_NORMAL}"
+    done
 }
+
+check_tools "${TOOLS[@]}"
