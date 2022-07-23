@@ -9,12 +9,12 @@ With this script we are going to enable installation of the latest Kubernetes Na
 
 Proposed method to run the script, is that it shoud be executable directly over internet with a single command without requiring any download.
 ```bash
-sh <(curl korifi.run)
+sh <(curl -sL korifi.run)
 ```
 
 ## Contributing
 
-In order to build the script and keep it interactive, we are going to use [Bashly](https://bashly.dannyb.co)
+We need to keep the script as much POSIX compatible as possible. i.e it should run with bourne shell `sh` on any OS.
 ### Pre-requisites (OS: Mac/Linux)
 
 - Docker
