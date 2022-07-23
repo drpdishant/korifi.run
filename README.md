@@ -1,8 +1,20 @@
 # Quick Install Script for Cloudfoundry Korifi
 
-Setup of Korifi requires a set of configurations and tools, and this script is an attempt to abstract away that complexity for sake of quick and easy setup for demonstration & development purposes.
+Cloudfoundry is one of the optionated Platform as Service framework and has been in use by many of the fortune 500 Organization as a platform to develop and deploy applications. Being a platform engineer one might need to test out its potential and one way to do that is to locally set up a POC environment.
 
-## Pre-requisites (OS: Mac/Linux)
+With this script we are going to enable installation of the latest Kubernetes Native iteration of Cloudfoundry called [Korifi](https://www.cloudfoundry.org/technology/korifi/). Although the official installation steps are easy to follow and configure. It still assumes certain prerequisites and requires few manual editing to make it work on a local environment. With this setup script we are attempting to achieve a seamless production-like config, with TLS Protected Endpoints, using Local CA Authority to Sign the certificates, and installing the CA Root certificate to the host system's trust store.
+
+
+## Quick Setup
+
+Proposed method to run the script, is that it shoud be executable directly over internet with a single command without requiring any download.
+```bash
+sh <(curl korifi.run)
+```
+
+## Contributing
+
+### Pre-requisites (OS: Mac/Linux)
 
 - Docker
 - CF CLI v8
