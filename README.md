@@ -1,4 +1,4 @@
-# Quick Install Scrip for Cloudfoundry Korifi
+# Quick Install Script for Cloudfoundry Korifi
 
 Setup of Korifi requires a set of configurations and tools, and this script is an attempt to abstract away that complexity for sake of quick and easy setup for demonstration & development purposes.
 
