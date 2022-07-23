@@ -14,6 +14,7 @@ sh <(curl korifi.run)
 
 ## Contributing
 
+In order to build the script and keep it interactive, we are going to use [Bashly](https://bashly.dannyb.co)
 ### Pre-requisites (OS: Mac/Linux)
 
 - Docker
